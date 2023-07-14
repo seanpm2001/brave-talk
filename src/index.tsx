@@ -17,7 +17,9 @@ if (!isProduction) {
 // deliberately don't wait for the resolution of the promise
 // returned here - we'll await it only when we need to interact with
 // the jitsi api.
-void miniLoadExternalApi("8x8.vc", "", config.vpaas);
+// to speak directly to the JAAS, the first two parameters are "8x8.vc", ""
+// the call below fetches the files locally from the /js directory
+void miniLoadExternalApi(window.location.host, "", config.vpaas);
 
 const rootNode = document.getElementById("root");
 
