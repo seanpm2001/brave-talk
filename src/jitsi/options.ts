@@ -181,6 +181,26 @@ export const jitsiOptions = (
     },
   };
 
+  // begin: invisv-integration
+  options.configOverwrite.forceTurnRelay = true;
+  options.iceServers = {
+    replace: [
+      {
+        type: "turn",
+        urls: "turn:invisv-turn.jitsi.net",
+      },
+      {
+        type: "turns",
+        urls: "turns:invisv-turn.jitsi.net",
+      },
+      {
+        type: "stun",
+        urls: null,
+      },
+    ],
+  };
+  // end: invisv-integration
+
   const features = jwt_decode(jwt)?.context?.features;
 
   reportAction("features", { features });
