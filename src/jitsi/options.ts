@@ -186,15 +186,15 @@ export const jitsiOptions = (
   options.iceServers = {
     replace: [
       {
-        type: "turn",
-        urls: "turn:invisv-turn.jitsi.net",
+        targetType: "turn",
+        urls: "turn:invisv-turn.jitsi.net:443",
       },
       {
-        type: "turns",
-        urls: "turns:invisv-turn.jitsi.net",
+        targetType: "turns",
+        urls: "turns:invisv-turn.jitsi.net:443?transport=tcp",
       },
       {
-        type: "stun",
+        targetType: "stun",
         urls: null,
       },
     ],
