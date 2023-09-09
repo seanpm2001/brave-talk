@@ -187,11 +187,11 @@ export const jitsiOptions = (
     replace: [
       {
         targetType: "turn",
-        urls: "turn:invisv-turn.jitsi.net:443",
+        urls: "turn:invisv-turnrelay.jitsi.net:443",
       },
       {
         targetType: "turns",
-        urls: "turns:invisv-turn.jitsi.net:443?transport=tcp",
+        urls: "turns:invisv-turnrelay.jitsi.net:443?transport=tcp",
       },
       {
         targetType: "stun",
